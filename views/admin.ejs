@@ -1,0 +1,139 @@
+<html lang="en">
+
+<head>
+  <%- include('partials/head'); %>
+</head>
+
+<body class="container">
+  <header>
+    <%- include('partials/headerAndLogout'); %>
+  </header>
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Sample Site</title>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="container col-sm-12" id="mainform">
+      <div id="signupbox" style=" margin-top:20px" class="mainbox col-md-3 col-md-offset-5 col-sm-8 col-sm-offset-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">File Section:</div>
+          </div>
+          <div class="panel-body">
+            <form>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/uploadjavatpoint">File Upload and
+                Download</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-sm-12" id="mainform">
+      <div id="signupbox" style=" margin-top:20px" class="mainbox col-md-9 col-md-offset-2 col-sm-4 col-sm-offset-2">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">Blockchain Section:</div>
+          </div>
+          <div class="panel-body">
+            <form>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/EnrollNewStudent">Start New
+                Admission</button>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/GetAllStudentInfo">Get All
+                Admissions from Blockchain</button>
+            </form>
+
+ <form class="form-horizontal" role="form" method="post" action="/ReadStudentInfo" onSubmit="return checkblank(this);">
+                            <div class="form-group">
+                                <label for="first_name" class="col-md-4 control-label">Current Admission Status</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="name" placeholder="Student Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i
+                                            class="icon-hand-right"></i> &nbsp Submit</button>
+                                </div>
+                            </div>
+ </form>
+
+
+ <form class="form-horizontal" role="form" method="post" action="/gethistory" onSubmit="return checkblank(this);">
+                            <div class="form-group">
+                                <label for="first_name" class="col-md-3 control-label">Get Admission History</label>
+                                <div class="col-md-10">
+                                    <input type="text" class="form-control" name="name" placeholder="Student Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-2 col-md-10">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i
+                                            class="icon-hand-right"></i> &nbsp Submit</button>
+                                </div>
+                            </div>
+ </form>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container col-sm-12" id="mainform">
+      <div id="signupbox" style=" margin-top:20px" class="mainbox col-md-9 col-md-offset-2 col-sm-8 col-sm-offset-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">Accounts with Us:</div>
+          </div>
+          <div class="panel-body">
+            <form>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/signup">Create a new Account</button>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/allstudents">All Students</button>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/alluni">All University Agents</button>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/allvisa">All Visa Agents</button>
+              <button type="submit" class="btn btn-secondary btn-sm" formaction="/allticket">All Ticket Agents</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container col-sm-12" id="mainform">
+      <div id="signupbox" style=" margin-top:20px" class="mainbox col-md-9 col-md-offset-2 col-sm-8 col-sm-offset-3">
+        <div class="panel panel-info">
+          <div class="panel-heading">
+            <div class="panel-title">Assign Agents:</div>
+          </div>
+          <div class="panel-body">
+            <form>
+              <p>
+                <label>Assign Agents:</label>
+                <input type="text" name="name" placeholder="Student Name" required>
+                <input type="text" name="name" placeholder="University Agent" required>
+                <input type="text" name="name" placeholder="Ticket Agent" required>
+                <input type="text" name="name" placeholder="Visa Agent" required>
+              </p>
+              <p>
+                <input type="submit" value="Submit">
+              </p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <footer>
+      <%- include('partials/footer'); %>
+    </footer>
+  </body>
+
+</html>

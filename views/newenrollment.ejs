@@ -1,0 +1,99 @@
+<html lang="en">
+
+<head>
+    <%- include('partials/head'); %>
+</head>
+
+<body class="container">
+
+    <header>
+        <%- include('partials/headerAndLogout'); %>
+    </header>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>Sample Site</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+
+    </head>
+
+    <body>
+        <div class="container col-sm-12" id="mainform">
+            <div id="signupbox" style=" margin-top:20px"
+                class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+
+                <div class="panel panel-info">
+                    <div class="panel-heading">
+                        <div class="panel-title">Enroll new student in Blockchain:</div>
+                    </div>
+                    <div class="panel-body">
+                        <form class="form-horizontal" role="form" method="post" action="/EnrollNewStudent"
+                            onSubmit="return checkblank(this);">
+                            <div id="signupalert" style="display:none" class="alert alert-danger">
+                                <p>Error:</p>
+                                <span></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="first_name" class="col-md-3 control-label">Student Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="name" placeholder="First Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name" class="col-md-3 control-label">University Name</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="uni" placeholder="University Name" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="mob_no" class="col-md-3 control-label">Visa Status</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="visa" placeholder="Visa Status" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="user_name" class="col-md-3 control-label">Ticket Status</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="ticket" placeholder="Ticket Status" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Document Submitted</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="doc" placeholder="Document Submitted" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="password" class="col-md-3 control-label">Amount</label>
+                                <div class="col-md-9">
+                                    <input type="text" class="form-control" name="fee" placeholder="Fee Paid" required>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <!-- Button -->
+                                <div class="col-md-offset-3 col-md-9">
+                                    <button id="btn-signup" type="submit" class="btn btn-info"><i
+                                            class="icon-hand-right"></i> &nbsp Create a new Blockchain</button>
+
+                                </div>
+                            </div>
+
+
+
+
+                        </form>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <footer>
+            <%- include('partials/footer'); %>
+        </footer>
+    </body>
+
+</html>
